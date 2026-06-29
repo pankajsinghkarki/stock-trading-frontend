@@ -21,12 +21,8 @@ export const API_BASE_URL =
     : "https://stock-trading-platform-ykat.onrender.com";
 
 const PRODUCTION_DASHBOARD_URL = "https://stock-trading-platform-psi.vercel.app";
-const LOCAL_DASHBOARD_URL = "http://localhost:3001";
 
 export const DASHBOARD_URL =
-  configuredDashboardUrl &&
-  (isLocalDevelopment || !isLoopbackUrl(configuredDashboardUrl))
+  configuredDashboardUrl && !isLoopbackUrl(configuredDashboardUrl)
     ? configuredDashboardUrl
-    : isLocalDevelopment
-    ? LOCAL_DASHBOARD_URL
     : PRODUCTION_DASHBOARD_URL;

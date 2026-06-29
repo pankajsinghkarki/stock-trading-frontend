@@ -1,0 +1,64 @@
+{
+  "React Functional Component": {
+    "prefix": "rfc",
+    "body": [
+      "import React from 'react';",
+      "",
+      "const ${1:ComponentName} = () => {",
+      "  return (",
+      "    <div>${0}</div>",
+      "  );",
+      "};",
+      "",
+      "export default ${1:ComponentName};"
+    ],
+    "description": "Create a React functional component"
+  },
+  "React Arrow Function Component": {
+    "prefix": "rafc",
+    "body": [
+      "import React from 'react';",
+      "",
+      "const ${1:ComponentName} = () => {",
+      "  return (",
+      "    <div>${0}</div>",
+      "  );",
+      "};",
+      "",
+      "export default ${1:ComponentName};"
+    ],
+    "description": "Create a React arrow function component"
+  },
+  "React useState Hook": {
+    "prefix": "usestate",
+    "body": [
+      "const [${1:state}, ${2:setState}] = React.useState(${3:null});"
+    ],
+    "description": "Insert useState hook"
+  },
+  "React useEffect Hook": {
+    "prefix": "useeffect",
+    "body": [
+      "React.useEffect(() => {",
+      "  ${0}",
+      "}, [${1:dependencies}]);"
+    ],
+    "description": "Insert useEffect hook"
+  },
+  "ReactDOM createRoot": {
+    "prefix": "rdr",
+    "body": [
+      "import React from 'react';",
+      "import ReactDOM from 'react-dom/client';",
+      "import App from './App';",
+      "",
+      "const root = ReactDOM.createRoot(document.getElementById('root'));",
+      "root.render(",
+      "  <React.StrictMode>",
+      "    <App />", 
+      "  </React.StrictMode>",
+      ");"
+    ],
+    "description": "Create ReactDOM root render"
+  }
+}
